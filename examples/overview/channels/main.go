@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/tsawler/myniceprogram/helpers"
 	"log"
+
+	"github.com/lmariano/myniceprogram/helpers"
 )
 
 const numPool = 1000
@@ -11,7 +12,6 @@ func calculateValue(intChan chan int) {
 	randomNumber := helpers.RandomNumber(numPool)
 	intChan <- randomNumber
 }
-
 
 func main() {
 	intChan := make(chan int)
